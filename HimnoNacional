@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+using namespace std;
+int main()
+{
+    std::cout << "Bolivianos: el hado propicio coronó nuestros votos y anhelo;" << std::endl;
+    std::cout << "es ya libre,ya libre este suelo,ya cesó su servil condición." << std::endl;
+    std::cout << "Al estruendo marcial que ayer fuera y al clamor de la guerra horroroso" << std::endl;
+    std::cout << "siguen hoy, en contraste armonioso,dulces himnos de paz y de unión." << std::endl;
+
+    return 0;
+}
