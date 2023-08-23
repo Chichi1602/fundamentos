@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float numero1, numero2, promedio;
+    
+    cout<<"Ingrese el primer numero: ";
+    cin>>numero1;
+    cout<<"Ingrese el segundo numero: ";
+    cin>>numero2;
+    promedio=numero1+numero2;
+    
+    cout<<"ingrese el tercer numero: ";
+    cin>>numero1;
+    cout<<"ingrese el cuarto numero: ";
+    cin>>numero2;
+    promedio=promedio+numero1+numero2;
+    
+    cout<<"Ingrese el quinto numero: ";
+    cin>>numero1;
+    promedio=promedio+numero1;
+    promedio=promedio/5;
+    cout<<"El promedio es: "<<promedio;
+    
+    
+    
+    return 0;
+}
