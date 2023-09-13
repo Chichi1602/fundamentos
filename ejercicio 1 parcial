@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   
+    float lado,area,pe;
+    cout<<"Ingrese lado: ";
+    cin>>lado;
+    
+    area= lado*lado;
+    pe= lado*4;
+    
+    cout<<"El area es: "<<area<<endl;
+    cout<<"El perimetro es: "<<pe;
+    
+    
+    return 0;
+}
