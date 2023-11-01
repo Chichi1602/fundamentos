@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int fac(int n);
+int combi(int n,int r);
+int main()
+{
+    int n,r;
+   cout<<"ingresa n"<<endl;cin>>n;
+   cout<<"ingresa r"<<endl;cin>>r;
+   cout<<" el resultado es"<<combi(n,r);
+}
+int fac(int n)
+{
+ if(n==0||n==1)
+ return 1;
+ else 
+  {float z;
+     z=n*(n-1);
+ return z;
+  }
+}
+int combi(int n,int r)
+{
+    float x;
+    x=fac(n)/fac(r)*fac(n-r);
+    return x;
+}
