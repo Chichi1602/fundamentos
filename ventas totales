@@ -1,0 +1,65 @@
+#include <iostream>
+
+const int MAX_PRODUCTOS = 100;  // Tamaño máximo de los vectores
+
+// Declaración de los vectores para almacenar productos y ventas
+char productos[MAX_PRODUCTOS][50];
+float ventas[MAX_PRODUCTOS];
+int numVentas = 0;  // Número actual de ventas registradas
+
+// Función para ingresar una venta
+void ingresarVenta() {
+    if (numVentas < MAX_PRODUCTOS) {
+        std::cout << "Ingrese el nombre del producto: ";
+        std::cin >> productos[numVentas];
+        std::cout << "Ingrese la venta realizada: $";
+        std::cin >> ventas[numVentas];
+
+        if (ventas[numVentas] < 0) {
+            std::cout << "La venta no puede ser un número negativo. Intente nuevamente." << std::endl;
+        } else {
+            std::cout << "Venta registrada con éxito." << std::endl;
+            numVentas++;
+        }
+    } else {
+        std::cout << "Se ha alcanzado el límite de ventas registradas." << std::endl;
+    }
+}
+
+// Función para calcular las ventas totales
+void calcularVentasTotales() {
+    float ventasTotales = 0;
+    for (int i = 0; i < numVentas; i++) {
+        ventasTotales += ventas[i];
+    }
+    std::cout << "Ventas totales realizadas: $" << ventasTotales << std::endl;
+}
+
+int main() {
+    int opcion;
+
+    while (true) {
+        std::cout << "\nMenú de opciones:" << std::endl;
+        std::cout << "1. Ingresar venta" << std::endl;
+        std::cout << "2. Calcular ventas totales" << std::endl;
+        std::cout << "3. Salir" << std::endl;
+        std::cout << "Seleccione una opción: ";
+        std::cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                ingresarVenta();
+                break;
+            case 2:
+                calcularVentasTotales();
+                break;
+            case 3:
+                std::cout << "¡Hasta luego!" << std::endl;
+                return 0;
+            default:
+                std::cout << "Opción no válida. Por favor, elija una opción válida." << std::endl;
+        }
+    }
+
+    return 0;
+}
